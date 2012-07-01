@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E08117E7159FE0E600F99B85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117E6159FE0E600F99B85 /* UIKit.framework */; };
+		E08117E9159FE0E600F99B85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117E8159FE0E600F99B85 /* Foundation.framework */; };
+		E08117EB159FE0E600F99B85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117EA159FE0E600F99B85 /* CoreGraphics.framework */; };
+		E08117F1159FE0E600F99B85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08117EF159FE0E600F99B85 /* InfoPlist.strings */; };
+		E08117F3159FE0E600F99B85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E08117F2159FE0E600F99B85 /* main.m */; };
+		E08117F7159FE0E600F99B85 /* PateoCalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E08117F6159FE0E600F99B85 /* PateoCalcAppDelegate.m */; };
+		E08117FA159FE0E600F99B85 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08117F8159FE0E600F99B85 /* MainStoryboard.storyboard */; };
+		E08117FD159FE0E600F99B85 /* PateoCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08117FC159FE0E600F99B85 /* PateoCalcViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E08117E2159FE0E600F99B85 /* PateoCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PateoCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08117E6159FE0E600F99B85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E08117E8159FE0E600F99B85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E08117EA159FE0E600F99B85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E08117EE159FE0E600F99B85 /* PateoCalc-Info.plist */ = {isa = PBXFileReference; path = "PateoCalc-Info.plist"; sourceTree = "<group>"; };
+		E08117F0159FE0E600F99B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E08117F2159FE0E600F99B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E08117F4159FE0E600F99B85 /* PateoCalc-Prefix.pch */ = {isa = PBXFileReference; path = "PateoCalc-Prefix.pch"; sourceTree = "<group>"; };
+		E08117F5159FE0E600F99B85 /* PateoCalcAppDelegate.h */ = {isa = PBXFileReference; path = PateoCalcAppDelegate.h; sourceTree = "<group>"; };
+		E08117F6159FE0E600F99B85 /* PateoCalcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PateoCalcAppDelegate.m; sourceTree = "<group>"; };
+		E08117F9159FE0E600F99B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E08117FB159FE0E600F99B85 /* PateoCalcViewController.h */ = {isa = PBXFileReference; path = PateoCalcViewController.h; sourceTree = "<group>"; };
+		E08117FC159FE0E600F99B85 /* PateoCalcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PateoCalcViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E08117DF159FE0E600F99B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08117E7159FE0E600F99B85 /* UIKit.framework in Frameworks */,
+				E08117E9159FE0E600F99B85 /* Foundation.framework in Frameworks */,
+				E08117EB159FE0E600F99B85 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E08117D7159FE0E500F99B85 = {
+			isa = PBXGroup;
+			children = (
+				E08117EC159FE0E600F99B85 /* PateoCalc */,
+				E08117E5159FE0E600F99B85 /* Frameworks */,
+				E08117E3159FE0E600F99B85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E08117E3159FE0E600F99B85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E08117E2159FE0E600F99B85 /* PateoCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E08117E5159FE0E600F99B85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E08117E6159FE0E600F99B85 /* UIKit.framework */,
+				E08117E8159FE0E600F99B85 /* Foundation.framework */,
+				E08117EA159FE0E600F99B85 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E08117EC159FE0E600F99B85 /* PateoCalc */ = {
+			isa = PBXGroup;
+			children = (
+				E08117F5159FE0E600F99B85 /* PateoCalcAppDelegate.h */,
+				E08117F6159FE0E600F99B85 /* PateoCalcAppDelegate.m */,
+				E08117F8159FE0E600F99B85 /* MainStoryboard.storyboard */,
+				E08117FB159FE0E600F99B85 /* PateoCalcViewController.h */,
+				E08117FC159FE0E600F99B85 /* PateoCalcViewController.m */,
+				E08117ED159FE0E600F99B85 /* Supporting Files */,
+			);
+			path = PateoCalc;
+			sourceTree = "<group>";
+		};
+		E08117ED159FE0E600F99B85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E08117EE159FE0E600F99B85 /* PateoCalc-Info.plist */,
+				E08117EF159FE0E600F99B85 /* InfoPlist.strings */,
+				E08117F2159FE0E600F99B85 /* main.m */,
+				E08117F4159FE0E600F99B85 /* PateoCalc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E08117E1159FE0E600F99B85 /* PateoCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0811800159FE0E600F99B85 /* Build configuration list for PBXNativeTarget "PateoCalc" */;
+			buildPhases = (
+				E08117DE159FE0E600F99B85 /* Sources */,
+				E08117DF159FE0E600F99B85 /* Frameworks */,
+				E08117E0159FE0E600F99B85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PateoCalc;
+			productName = PateoCalc;
+			productReference = E08117E2159FE0E600F99B85 /* PateoCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E08117D9159FE0E500F99B85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = E08117DC159FE0E500F99B85 /* Build configuration list for PBXProject "PateoCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E08117D7159FE0E500F99B85;
+			productRefGroup = E08117E3159FE0E600F99B85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E08117E1159FE0E600F99B85 /* PateoCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E08117E0159FE0E600F99B85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08117F1159FE0E600F99B85 /* InfoPlist.strings in Resources */,
+				E08117FA159FE0E600F99B85 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E08117DE159FE0E600F99B85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08117F3159FE0E600F99B85 /* main.m in Sources */,
+				E08117F7159FE0E600F99B85 /* PateoCalcAppDelegate.m in Sources */,
+				E08117FD159FE0E600F99B85 /* PateoCalcViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E08117EF159FE0E600F99B85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08117F0159FE0E600F99B85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E08117F8159FE0E600F99B85 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08117F9159FE0E600F99B85 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E08117FE159FE0E600F99B85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E08117FF159FE0E600F99B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0811801159FE0E600F99B85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PateoCalc/PateoCalc-Prefix.pch";
+				INFOPLIST_FILE = "PateoCalc/PateoCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E0811802159FE0E600F99B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PateoCalc/PateoCalc-Prefix.pch";
+				INFOPLIST_FILE = "PateoCalc/PateoCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E08117DC159FE0E500F99B85 /* Build configuration list for PBXProject "PateoCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E08117FE159FE0E600F99B85 /* Debug */,
+				E08117FF159FE0E600F99B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0811800159FE0E600F99B85 /* Build configuration list for PBXNativeTarget "PateoCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0811801159FE0E600F99B85 /* Debug */,
+				E0811802159FE0E600F99B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E08117D9159FE0E500F99B85 /* Project object */;
+}
