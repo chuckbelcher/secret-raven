@@ -10,4 +10,6 @@
 
 @interface PateoCalcViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
+
 @end

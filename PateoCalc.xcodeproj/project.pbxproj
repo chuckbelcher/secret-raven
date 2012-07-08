@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03CFAA115A0175800CDBD20 /* PateoCalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E03CFAA015A0175800CDBD20 /* PateoCalcModel.m */; };
 		E08117E7159FE0E600F99B85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117E6159FE0E600F99B85 /* UIKit.framework */; };
 		E08117E9159FE0E600F99B85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117E8159FE0E600F99B85 /* Foundation.framework */; };
 		E08117EB159FE0E600F99B85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08117EA159FE0E600F99B85 /* CoreGraphics.framework */; };
@@ -18,18 +19,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E03CFA9F15A0174E00CDBD20 /* PateoCalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PateoCalcModel.h; sourceTree = "<group>"; };
+		E03CFAA015A0175800CDBD20 /* PateoCalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PateoCalcModel.m; sourceTree = "<group>"; };
 		E08117E2159FE0E600F99B85 /* PateoCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PateoCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08117E6159FE0E600F99B85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E08117E8159FE0E600F99B85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E08117EA159FE0E600F99B85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E08117EE159FE0E600F99B85 /* PateoCalc-Info.plist */ = {isa = PBXFileReference; path = "PateoCalc-Info.plist"; sourceTree = "<group>"; };
+		E08117EE159FE0E600F99B85 /* PateoCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PateoCalc-Info.plist"; sourceTree = "<group>"; };
 		E08117F0159FE0E600F99B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E08117F2159FE0E600F99B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E08117F4159FE0E600F99B85 /* PateoCalc-Prefix.pch */ = {isa = PBXFileReference; path = "PateoCalc-Prefix.pch"; sourceTree = "<group>"; };
-		E08117F5159FE0E600F99B85 /* PateoCalcAppDelegate.h */ = {isa = PBXFileReference; path = PateoCalcAppDelegate.h; sourceTree = "<group>"; };
+		E08117F4159FE0E600F99B85 /* PateoCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PateoCalc-Prefix.pch"; sourceTree = "<group>"; };
+		E08117F5159FE0E600F99B85 /* PateoCalcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PateoCalcAppDelegate.h; sourceTree = "<group>"; };
 		E08117F6159FE0E600F99B85 /* PateoCalcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PateoCalcAppDelegate.m; sourceTree = "<group>"; };
 		E08117F9159FE0E600F99B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E08117FB159FE0E600F99B85 /* PateoCalcViewController.h */ = {isa = PBXFileReference; path = PateoCalcViewController.h; sourceTree = "<group>"; };
+		E08117FB159FE0E600F99B85 /* PateoCalcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PateoCalcViewController.h; sourceTree = "<group>"; };
 		E08117FC159FE0E600F99B85 /* PateoCalcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PateoCalcViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +80,8 @@
 		E08117EC159FE0E600F99B85 /* PateoCalc */ = {
 			isa = PBXGroup;
 			children = (
+				E03CFAA015A0175800CDBD20 /* PateoCalcModel.m */,
+				E03CFA9F15A0174E00CDBD20 /* PateoCalcModel.h */,
 				E08117F5159FE0E600F99B85 /* PateoCalcAppDelegate.h */,
 				E08117F6159FE0E600F99B85 /* PateoCalcAppDelegate.m */,
 				E08117F8159FE0E600F99B85 /* MainStoryboard.storyboard */,
@@ -163,6 +168,7 @@
 				E08117F3159FE0E600F99B85 /* main.m in Sources */,
 				E08117F7159FE0E600F99B85 /* PateoCalcAppDelegate.m in Sources */,
 				E08117FD159FE0E600F99B85 /* PateoCalcViewController.m in Sources */,
+				E03CFAA115A0175800CDBD20 /* PateoCalcModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +280,7 @@
 				E0811802159FE0E600F99B85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

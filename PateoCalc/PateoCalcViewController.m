@@ -1,4 +1,4 @@
-//
+//  PateoGroup Calculator
 //  PateoCalcViewController.m
 //  PateoCalc
 //
@@ -7,54 +7,66 @@
 //
 
 #import "PateoCalcViewController.h"
+#import "PateoCalcModel.h"
+
+@interface PateoCalcViewController()
+@property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
+@property (nonatomic, strong) PateoCalcModel *pateoCalcModel;
+@property (nonatomic) BOOL userPressedDecimal;
+@end
 
 @implementation PateoCalcViewController
+@synthesize display;
+@synthesize userIsInTheMiddleOfEnteringANumber;
+@synthesize pateoCalcModel = _pateoCalcModel;
+@synthesize userPressedDecimal;
 
-- (void)didReceiveMemoryWarning
+-(PateoCalcModel *)pateoCalcModel
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    if (!_pateoCalcModel) _pateoCalcModel = [[PateoCalcModel alloc] init];
+    return _pateoCalcModel;
 }
 
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (IBAction)digitPressed:(UIButton *)sender {
+    NSString *digit = [sender currentTitle];
+    if (self.userIsInTheMiddleOfEnteringANumber) {
+        self.display.text=[self.display.text stringByAppendingString:digit];
+    } else {
+        self.display.text = digit;
+        self.userIsInTheMiddleOfEnteringANumber = YES;
+    }
+}
+- (IBAction)decimalPressed:(id)sender {
+    NSString *decimal = [sender currentTitle];
+    if (self.userPressedDecimal == NO)
+    {
+        self.display.text=[self.display.text stringByAppendingString:decimal];
+    }
+    self.userPressedDecimal = YES;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+- (IBAction)enterPressed {
+    [self.pateoCalcModel pushOperand:[self.display.text doubleValue]];
+    self.userIsInTheMiddleOfEnteringANumber = NO;
+    self.userPressedDecimal = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (IBAction)operationPressed:(UIButton *)sender {
+    if (self.userIsInTheMiddleOfEnteringANumber) 
+    {
+        [self enterPressed];
+    }
+    NSString *operation = [sender currentTitle];
+    double result=[self.pateoCalcModel performOperation:operation];
+    self.display.text = [NSString stringWithFormat:@"%g", result];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+
+- (IBAction)clearPressed:(id)sender {
+    self.display.text = @"0";
+    self.userIsInTheMiddleOfEnteringANumber = NO;
+    [self.pateoCalcModel pushOperand:0];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
 
 @end
