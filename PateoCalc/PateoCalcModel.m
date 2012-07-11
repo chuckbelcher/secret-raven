@@ -8,6 +8,9 @@
 
 #import "PateoCalcModel.h"
 @interface PateoCalcModel()
+//contains all operations and operands
+//operands are NSNumber
+//operations are //NSString
 @property (nonatomic, strong) NSMutableArray *programStack;
 @end
 
@@ -18,34 +21,37 @@
 {
     if (!_programStack)
     {
+        //lazily instantiate
         _programStack = [[NSMutableArray alloc] init];
     }
     return _programStack;
 }
 
-
+//Add operand to stack
 -(void)pushOperand:(double)operand
 {
     [self.programStack addObject:[NSNumber numberWithDouble:operand]];
 }
 
-
+//Add operation to stack
 -(double)performOperation:(NSString *)operation
 {
     [self.programStack addObject:operation];
     return [PateoCalcModel runProgram:self.program];
 }
 
+//return a read only copy of the array if called by api
 - (id)program
 {
     return [self.programStack copy];
 }
 
-
+//return a string describing the program if descriptionOfProgram is called.
 +(NSString *)descriptionOfProgram:(id)program
 {
     return @"Due for assignment 2";
 }
+
 
 +(double)popOperandOffStack:(NSMutableArray *)stack
 {

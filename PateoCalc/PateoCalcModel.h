@@ -13,7 +13,6 @@
 -(double)performOperation:(NSString *)operation;
 
 //add public api
-
 @property (readonly) id program;
 
 +(double)runProgram:(id) program;
