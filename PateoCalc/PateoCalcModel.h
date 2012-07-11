@@ -11,4 +11,12 @@
 @interface PateoCalcModel : NSObject
 -(void)pushOperand:(double)operand;
 -(double)performOperation:(NSString *)operation;
+
+//add public api
+
+@property (readonly) id program;
+
++(double)runProgram:(id) program;
++(NSString *)descriptionOfProgram:(id)program;
+
 @end

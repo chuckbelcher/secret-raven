@@ -8,61 +8,89 @@
 
 #import "PateoCalcModel.h"
 @interface PateoCalcModel()
-@property (nonatomic, strong) NSMutableArray *operandStack;
+@property (nonatomic, strong) NSMutableArray *programStack;
 @end
 
 @implementation PateoCalcModel
-@synthesize operandStack = _operandStack;
+@synthesize programStack = _programStack;
 
--(NSMutableArray *)operandStack
+-(NSMutableArray *)programStack
 {
-    if (!_operandStack)
+    if (!_programStack)
     {
-        _operandStack = [[NSMutableArray alloc] init];
+        _programStack = [[NSMutableArray alloc] init];
     }
-    return _operandStack;
+    return _programStack;
 }
 
 
 -(void)pushOperand:(double)operand
 {
-    NSNumber *operandObject = [NSNumber numberWithDouble:operand];
-    [self.operandStack addObject:operandObject];
+    [self.programStack addObject:[NSNumber numberWithDouble:operand]];
 }
 
--(double)popOperand
-{
-    NSNumber *operandObject = [self.operandStack lastObject];
-    if (operandObject) [self.operandStack removeLastObject];
-    return [operandObject doubleValue];
-}
 
 -(double)performOperation:(NSString *)operation
 {
+    [self.programStack addObject:operation];
+    return [PateoCalcModel runProgram:self.program];
+}
+
+- (id)program
+{
+    return [self.programStack copy];
+}
+
+
++(NSString *)descriptionOfProgram:(id)program
+{
+    return @"Due for assignment 2";
+}
+
++(double)popOperandOffStack:(NSMutableArray *)stack
+{
     double result=0;
     
-    if ([operation isEqualToString:@"+"])
-    {
-        result = [self popOperand] + [self popOperand];
-    } 
-    else if ([@"*" isEqualToString:operation]) 
-    {
-        result = [self popOperand] * [self popOperand];
-    }
-    else if ([@"-" isEqualToString:operation]) 
-    {
-        double subtrahend = [self popOperand];
-        result = [self popOperand] - subtrahend;
-    }
-    else if ([@"/" isEqualToString:operation]) 
-    {
-        double divisor = [self popOperand];
-        result = [self popOperand] / divisor;
-    }
+    id topOfStack = [stack lastObject];
+    if (topOfStack) [stack removeLastObject];
     
-    [self pushOperand:result];
+    if ([topOfStack isKindOfClass:[NSNumber class]]) {
+        result = [topOfStack doubleValue];
+    }
+    else if ([topOfStack isKindOfClass:[NSString class]]) {
+        
+        NSString *operation = topOfStack;
+        
+        if ([operation isEqualToString:@"+"])
+        {
+            result = [self popOperandOffStack:stack] + [self popOperandOffStack:stack];
+        } 
+        else if ([@"*" isEqualToString:operation]) 
+        {
+            result = [self popOperandOffStack:stack] * [self popOperandOffStack:stack];
+        }
+        else if ([@"-" isEqualToString:operation]) 
+        {
+            double subtrahend = [self popOperandOffStack:stack];
+            result = [self popOperandOffStack:stack] - subtrahend;
+        }
+        else if ([@"/" isEqualToString:operation]) 
+        {
+            double divisor = [self popOperandOffStack:stack];
+            result = [self popOperandOffStack:stack] / divisor;
+        }
 
+    }
     return result;
+}
+
++(double)runProgram:(id)program
+{
+    NSMutableArray *stack;
+    if ([program isKindOfClass:[NSArray class]]) {
+        stack=[program mutableCopy];
+    }
+    return [self popOperandOffStack:stack];
 }
 
 @end
